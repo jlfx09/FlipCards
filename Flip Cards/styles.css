@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.flip-card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 20px;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #2196F3;
+    color: #fff;
+}
+
+#flip-card-1 .flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: red;
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+} 
+
+#flip-card-2 .flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: orange;
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+} 
+
+#flip-card-3 .flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #2196F3;
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+#flip-card-2 .flip-card-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+#flip-card-2:hover .flip-card-inner {
+    transform: rotateX(180deg);
+}
+
+#flip-card-3 .flip-card-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+#flip-card-3:hover .flip-card-inner {
+    transform: rotateZ(180deg);
+}
